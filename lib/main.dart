@@ -125,7 +125,6 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             const Expanded(
               child: SingleChildScrollView(
-                padding: EdgeInsets.only(left: 120.0),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.start,
