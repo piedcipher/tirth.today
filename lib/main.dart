@@ -1,5 +1,6 @@
  import 'package:flutter/material.dart';
  import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+ import 'package:google_fonts/google_fonts.dart';
  import 'package:url_launcher/url_launcher.dart';
  
  enum Socials {
@@ -51,6 +52,14 @@
    static const tagline = 'engineer, photographer, artist';
  }
  
+ abstract class AppColors {
+   static const noteBookWhite = Color(0xFFF3EEFB);
+   static final notebookRed = Colors.redAccent[100];
+   static final notebookBlack = Colors.black26.withOpacity(.1);
+   static const handwritingBlue = Color(0xFF0039A6);
+   static const handwritingDarkBlue = Color(0xFF002b59);
+ }
+ 
  void main() {
    runApp(const MyApp());
  }
@@ -63,8 +72,8 @@
      return MaterialApp(
        title: Data.name,
        theme: ThemeData(
-         colorScheme: ColorScheme.fromSeed(seedColor: Colors.white),
-         useMaterial3: true,
+         colorScheme: ColorScheme.fromSeed(seedColor: AppColors.noteBookWhite),
+         textTheme: GoogleFonts.pangolinTextTheme(),
        ),
        home: const MyHomePage(),
      );
@@ -82,37 +91,38 @@
    @override
    Widget build(BuildContext context) {
      return Scaffold(
-       backgroundColor: const Color(0xFFF3EEFB),
+       backgroundColor: AppColors.noteBookWhite,
        body: Center(
          child: Stack(
+           alignment: Alignment.center,
            children: [
              Row(
                children: [
                  const SizedBox(width: 60),
                  DecoratedBox(
                    decoration: BoxDecoration(
-                     color: Colors.redAccent[100],
+                     color: AppColors.notebookRed,
                    ),
                    child: const SizedBox(width: 1.5, height: double.infinity),
                  ),
                  const SizedBox(width: 5),
                  DecoratedBox(
                    decoration: BoxDecoration(
-                     color: Colors.redAccent[100],
+                     color: AppColors.notebookRed,
                    ),
                    child: const SizedBox(width: 1.5, height: double.infinity),
                  ),
                  const Spacer(),
                  DecoratedBox(
                    decoration: BoxDecoration(
-                     color: Colors.redAccent[100],
+                     color: AppColors.notebookRed,
                    ),
                    child: const SizedBox(width: 1.5, height: double.infinity),
                  ),
                  const SizedBox(width: 5),
                  DecoratedBox(
                    decoration: BoxDecoration(
-                     color: Colors.redAccent[100],
+                     color: AppColors.notebookRed,
                    ),
                    child: const SizedBox(width: 1.5, height: double.infinity),
                  ),
@@ -130,7 +140,7 @@
                          const SizedBox(height: 40),
                          DecoratedBox(
                            decoration: BoxDecoration(
-                             color: Colors.black26.withOpacity(.08),
+                             color: AppColors.notebookBlack,
                            ),
                            child: const SizedBox(
                              width: double.infinity,
@@ -147,110 +157,130 @@
              ),
              Column(
                mainAxisAlignment: MainAxisAlignment.center,
-               crossAxisAlignment: CrossAxisAlignment.center,
                children: [
                  const SizedBox(height: 60),
                  DecoratedBox(
                    decoration: BoxDecoration(
-                     color: Colors.redAccent[100],
+                     color: AppColors.notebookRed,
                    ),
                    child: const SizedBox(height: 1.5, width: double.infinity),
                  ),
                  const SizedBox(height: 5),
                  DecoratedBox(
                    decoration: BoxDecoration(
-                     color: Colors.redAccent[100],
+                     color: AppColors.notebookRed,
                    ),
                    child: const SizedBox(height: 1.5, width: double.infinity),
                  ),
                  const Spacer(),
-                 Expanded(
-                   child: Column(
-                     children: [
-                       const Text(
-                         Data.name,
-                         style: TextStyle(
-                           fontSize: 28,
-                           color: Color(0xFF002b59),
-                           fontWeight: FontWeight.w500,
-                         ),
-                       ),
-                       const SizedBox(height: 12),
-                       const Text(
-                         Data.tagline,
-                         style: TextStyle(
-                           fontSize: 16,
-                           color: Color(0xFF002b59),
-                         ),
-                       ),
-                       const SizedBox(height: 12),
-                       OverflowBar(
-                         spacing: 8,
-                         overflowSpacing: 8,
-                         children: [
-                           IconButton(
-                             tooltip: Socials.github.tooltip,
-                             icon: const Icon(FontAwesomeIcons.github),
-                             onPressed: () {
-                               Socials.github.launcher();
-                             },
-                           ),
-                           IconButton(
-                             tooltip: Socials.stackOverflow.tooltip,
-                             icon: const Icon(FontAwesomeIcons.stackOverflow),
-                             onPressed: () {
-                               Socials.stackOverflow.launcher();
-                             },
-                           ),
-                           IconButton(
-                             tooltip: Socials.medium.tooltip,
-                             icon: const Icon(FontAwesomeIcons.medium),
-                             onPressed: () {
-                               Socials.medium.launcher();
-                             },
-                           ),
-                           IconButton(
-                             tooltip: Socials.twitter.tooltip,
-                             icon: const Icon(FontAwesomeIcons.xTwitter),
-                             onPressed: () {
-                               Socials.twitter.launcher();
-                             },
-                           ),
-                           IconButton(
-                             tooltip: Socials.linkedIn.tooltip,
-                             icon: const Icon(FontAwesomeIcons.linkedinIn),
-                             onPressed: () {
-                               Socials.linkedIn.launcher();
-                             },
-                           ),
-                           IconButton(
-                             tooltip: Socials.speakerDeck.tooltip,
-                             icon: const Icon(FontAwesomeIcons.speakerDeck),
-                             onPressed: () {
-                               Socials.speakerDeck.launcher();
-                             },
-                           ),
-                         ],
-                       ),
-                     ],
-                   ),
-                 ),
-                 const Spacer(),
                  DecoratedBox(
                    decoration: BoxDecoration(
-                     color: Colors.redAccent[100],
+                     color: AppColors.notebookRed,
                    ),
                    child: const SizedBox(height: 1.5, width: double.infinity),
                  ),
                  const SizedBox(height: 5),
                  DecoratedBox(
                    decoration: BoxDecoration(
-                     color: Colors.redAccent[100],
+                     color: AppColors.notebookRed,
                    ),
                    child: const SizedBox(height: 1.5, width: double.infinity),
                  ),
                  const SizedBox(height: 60),
                ],
+             ),
+             Expanded(
+               child: Column(
+                 mainAxisAlignment: MainAxisAlignment.center,
+                 children: [
+                   const Text(
+                     Data.name,
+                     style: TextStyle(
+                       fontSize: 32,
+                       color: AppColors.handwritingBlue,
+                       fontWeight: FontWeight.w500,
+                       decoration: TextDecoration.underline,
+                       decorationStyle: TextDecorationStyle.dotted,
+                       decorationColor: AppColors.handwritingBlue,
+                       decorationThickness: .8,
+                     ),
+                   ),
+                   const SizedBox(height: 12),
+                   const Text(
+                     Data.tagline,
+                     style: TextStyle(
+                       fontSize: 18,
+                       color: AppColors.handwritingBlue,
+                       decoration: TextDecoration.underline,
+                       decorationStyle: TextDecorationStyle.wavy,
+                       decorationColor: AppColors.handwritingBlue,
+                       decorationThickness: .8,
+                     ),
+                   ),
+                   const SizedBox(height: 12),
+                   OverflowBar(
+                     spacing: 8,
+                     overflowSpacing: 8,
+                     children: [
+                       IconButton(
+                         color: AppColors.handwritingBlue,
+                         tooltip: Socials.github.tooltip,
+                         icon: const Icon(FontAwesomeIcons.github),
+                         onPressed: () {
+                           Socials.github.launcher();
+                         },
+                       ),
+                       IconButton(
+                         color: AppColors.handwritingBlue,
+                         tooltip: Socials.stackOverflow.tooltip,
+                         icon: const Icon(FontAwesomeIcons.stackOverflow),
+                         onPressed: () {
+                           Socials.stackOverflow.launcher();
+                         },
+                       ),
+                       IconButton(
+                         color: AppColors.handwritingBlue,
+                         tooltip: Socials.medium.tooltip,
+                         icon: const Icon(FontAwesomeIcons.medium),
+                         onPressed: () {
+                           Socials.medium.launcher();
+                         },
+                       ),
+                     ],
+                   ),
+                   const SizedBox(height: 12),
+                   OverflowBar(
+                     spacing: 8,
+                     overflowSpacing: 8,
+                     children: [
+                       IconButton(
+                         color: AppColors.handwritingBlue,
+                         tooltip: Socials.twitter.tooltip,
+                         icon: const Icon(FontAwesomeIcons.xTwitter),
+                         onPressed: () {
+                           Socials.twitter.launcher();
+                         },
+                       ),
+                       IconButton(
+                         color: AppColors.handwritingBlue,
+                         tooltip: Socials.linkedIn.tooltip,
+                         icon: const Icon(FontAwesomeIcons.linkedinIn),
+                         onPressed: () {
+                           Socials.linkedIn.launcher();
+                         },
+                       ),
+                       IconButton(
+                         color: AppColors.handwritingBlue,
+                         tooltip: Socials.speakerDeck.tooltip,
+                         icon: const Icon(FontAwesomeIcons.speakerDeck),
+                         onPressed: () {
+                           Socials.speakerDeck.launcher();
+                         },
+                       ),
+                     ],
+                   ),
+                 ],
+               ),
              ),
            ],
          ),
