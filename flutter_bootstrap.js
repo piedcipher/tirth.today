@@ -38,10 +38,10 @@ addEventListener("message", eventListener);
 if (!window._flutter) {
   window._flutter = {};
 }
-_flutter.buildConfig = {"engineRevision":"4e12c1aad286279cd6c8b6be8cb9968cbf473b56","wasmHashes":{"chromium/canvaskit.wasm":"9c2188f4cc67cf183d4811b9971e56dee1dd855cda9fbfcc01db13f631eb24eb","webparagraph/canvaskit.wasm":"139161220d0240d3040d84cbe76db5e137afd316c3eaef813f9e25da3dd68236","canvaskit.wasm":"520cb2d912d671aa7604d1a4810f6f572502991d9659630ae12a727909f3b0a9","skwasm.wasm":"8ac7fc8f35ddb15d373f8c849daae78058785e34b52ae3e877ff09a402e56268","skwasm_heavy.wasm":"bd3bcccb2c5e0ba31eca18cc5865036e6fffda60fb147ac932b8ab9889b4bb50","wimp.wasm":"5f5ed4839567ed4d42a40de99a34db2a25c60c62c8123a4746af8953d4c85dc5"},"builds":[{"compileTarget":"dart2wasm","renderer":"skwasm","mainWasmPath":"main.dart.wasm","jsSupportRuntimePath":"main.dart.mjs"},{"compileTarget":"dart2js","renderer":"canvaskit","mainJsPath":"main.dart.js"}]};
+_flutter.buildConfig = {"engineRevision":"4e12c1aad286279cd6c8b6be8cb9968cbf473b56","wasmHashes":{"chromium/canvaskit.wasm":"9c2188f4cc67cf183d4811b9971e56dee1dd855cda9fbfcc01db13f631eb24eb","webparagraph/canvaskit.wasm":"139161220d0240d3040d84cbe76db5e137afd316c3eaef813f9e25da3dd68236","skwasm_heavy.wasm":"bd3bcccb2c5e0ba31eca18cc5865036e6fffda60fb147ac932b8ab9889b4bb50","canvaskit.wasm":"520cb2d912d671aa7604d1a4810f6f572502991d9659630ae12a727909f3b0a9","skwasm.wasm":"8ac7fc8f35ddb15d373f8c849daae78058785e34b52ae3e877ff09a402e56268","wimp.wasm":"5f5ed4839567ed4d42a40de99a34db2a25c60c62c8123a4746af8953d4c85dc5"},"builds":[{"compileTarget":"dart2wasm","renderer":"skwasm","mainWasmPath":"main.dart.wasm","jsSupportRuntimePath":"main.dart.mjs"},{"compileTarget":"dart2js","renderer":"canvaskit","mainJsPath":"main.dart.js"}]};
 
 _flutter.loader.load({
   serviceWorkerSettings: {
-    serviceWorkerVersion: "378456813" /* Flutter's service worker is deprecated and will be removed in a future Flutter release. */
+    serviceWorkerVersion: "1180148239" /* Flutter's service worker is deprecated and will be removed in a future Flutter release. */
   }
 });
