@@ -31,14 +31,6 @@ class _RoughPageState extends State<RoughPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppColors.notebookWhite,
-      floatingActionButton: FloatingActionButton.extended(
-        heroTag: 'rough_next_page_fab',
-        onPressed: () {
-          GetIt.I.get<GlobalKey<PageFlipWidgetState>>().currentState?.nextPage();
-        },
-        label: Text('Next Page'),
-        tooltip: 'Page can be swiped as well',
-      ),
       body: Stack(
         children: [
           const NotebookLayout(),
