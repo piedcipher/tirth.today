@@ -139,7 +139,7 @@ class _MyHomePageState extends State<MyHomePage> {
         await audioPlayer.play();
         await audioPlayer.stop();
       },
-      lastPage: ArtVideoPlayer(),
+      lastPage: RoughPage(),
       children: <Widget>[
         for (var i = 0; i < Pages.values.length; i++)
           switch (Pages.values[i]) {
