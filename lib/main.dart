@@ -10,6 +10,7 @@ import 'package:tirth_today/pages/blog_list_page.dart';
 import 'package:tirth_today/pages/blog_post_page.dart';
 import 'package:tirth_today/pages/flutter_job_board.dart';
 import 'package:tirth_today/pages/home_page.dart';
+import 'package:tirth_today/pages/rough_page.dart';
 import 'package:tirth_today/pages/work_experience_page.dart';
 import 'package:tirth_today/utils/constants.dart';
 
@@ -145,6 +146,7 @@ class _MyHomePageState extends State<MyHomePage> {
             Pages.home => const HomePage(),
             Pages.workExperience => const WorkExperiencePage(),
             Pages.artPage => const ArtPage(),
+            Pages.roughPage => const RoughPage(),
             _ => const ArtVideoPlayer(),
           },
       ],

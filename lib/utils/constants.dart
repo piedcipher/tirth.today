@@ -14,7 +14,7 @@ enum Socials {
   teampixel,
 }
 
-enum Pages { home, workExperience, artPage, artVideoPlayer }
+enum Pages { home, workExperience, artPage, roughPage }
 
 extension SocialsExtension on Socials {
   void launcher() async {
