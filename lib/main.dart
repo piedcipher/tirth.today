@@ -10,6 +10,7 @@ import 'package:tirth_today/pages/blog_list_page.dart';
 import 'package:tirth_today/pages/blog_post_page.dart';
 import 'package:tirth_today/pages/flutter_job_board.dart';
 import 'package:tirth_today/pages/home_page.dart';
+import 'package:tirth_today/pages/rough_page.dart';
 import 'package:tirth_today/pages/work_experience_page.dart';
 import 'package:tirth_today/utils/constants.dart';
 
@@ -138,14 +139,15 @@ class _MyHomePageState extends State<MyHomePage> {
         await audioPlayer.play();
         await audioPlayer.stop();
       },
-      lastPage: ArtVideoPlayer(),
+      lastPage: RoughPage(),
       children: <Widget>[
         for (var i = 0; i < Pages.values.length; i++)
           switch (Pages.values[i]) {
             Pages.home => const HomePage(),
             Pages.workExperience => const WorkExperiencePage(),
             Pages.artPage => const ArtPage(),
-            _ => const ArtVideoPlayer(),
+            Pages.artVideoPlayer => const ArtVideoPlayer(),
+            Pages.roughPage => const RoughPage(),
           },
       ],
     );
