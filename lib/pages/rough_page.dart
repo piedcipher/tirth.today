@@ -74,7 +74,7 @@ class _RoughPageState extends State<RoughPage> {
                       borderRadius: BorderRadius.circular(8),
                       child: DrawingBoard(
                         controller: _drawingController,
-                        background: Container(color: Colors.transparent),
+                        background: Container(color: AppColors.notebookWhite),
                         boardPanEnabled: false,
                         boardScaleEnabled: false,
                         enablePalmRejection: true,
